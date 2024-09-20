@@ -1,0 +1,27 @@
+.mainnav ul{
+    display: flex;
+    justify-content: center;
+}
+  
+.mainnav ul li{
+    margin: 0 23px;
+    font-weight: bold;
+    text-decoration: none;
+    list-style: none;
+}
+
+.blogItem{
+    margin: 5px 0px;
+}
+
+.blogItem h3{
+    cursor: pointer;
+}
+
+.imageWrap{
+    padding: 20px;
+}
+
+.homeBlog{
+    border-radius: 5px;
+}
