@@ -1,12 +1,34 @@
-import React from 'react'
+"use client"; 
+import React, { useEffect, useState } from 'react'
 import styles from '../blogpost.module.css';
 
 const Blogpost = ({ params }) => {
+  const [blog, setBlog] = useState();
+  const [loading, setLoading] = useState(true)
+  useEffect(()=>{
+    const getBlogData = async ()=>{
+      try{
+        let apiData = await fetch(`/api/blog?slug=${params.slug}`);
+        //console.log(apiData);
+        let jsonData = await apiData.json();
+        //console.log(jsonData);
+        setBlog(jsonData);
+      }catch(error){
+        console.error('Error fetching blogs', error);
+      }finally{
+        setLoading(false);
+      }
+    }
+    getBlogData();
+  },[])
+  
+  if (loading) return <p>Loading...</p>;
+
   return (
     <div className={styles.divWrap} style={{ display: 'flex', justifyContent: 'center', flexDirection:'column', textAlign:'left'}}>
-      <h2>Title of the page: {params.slug}</h2>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio doloremque iste odio ex, veniam ipsam inventore! Eveniet quas dolores dolorum libero, ratione iste.
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, itaque sint, facere iusto eveniet provident consequatur vitae quidem voluptatibus autem doloribus dolor id quas sequi blanditiis suscipit dicta qui rerum voluptatum in nihil magni. Nisi in suscipit molestias nostrum. Sed minus enim porro itaque laudantium.
+      <h2>{blog && blog.title}</h2>
+      <p>
+        {blog && blog.content}
       </p>
     </div>
   )

@@ -12,7 +12,7 @@ const Blog = () => {
         let apiData = await fetch("/api/blogs");
         //console.log(apiData);
         let jsonData = await apiData.json();
-        console.log(jsonData);
+        //console.log(jsonData);
         setBlogs(jsonData);
       }catch(error){
         console.error('Error fetching blogs', error);
