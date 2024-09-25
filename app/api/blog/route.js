@@ -4,6 +4,7 @@ import path from 'path';
 
 //http://localhost:3000/api/blog?slug=learn-js
 export async function GET(request) {
+    console.log("blog api called");
     const url = new URL(request.url);
     const slug = url.searchParams.get('slug');
 

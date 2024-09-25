@@ -1,2 +1,14 @@
-.contact{
+.formGroup{
+    margin-top: 14px;
+}
+
+.container{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.formLabel{
+    margin: 0 10px;
+    font-size: 1rem;
 }

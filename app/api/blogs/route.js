@@ -4,7 +4,7 @@ import path from 'path';
 
 //http://localhost:3000/api/blogs
 export async function GET(request) {
-
+    console.log("blogs api called");
     const filePath = path.join(process.cwd(), 'blogsdata');
     //console.log(filePath);
     try {
