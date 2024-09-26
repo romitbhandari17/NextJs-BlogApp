@@ -1,2 +1,8 @@
-.about{
+.container{
+    max-width: 45vw;
+    margin: auto;
+}
+
+.h1{
+    text-align: center;
 }

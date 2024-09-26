@@ -15,26 +15,29 @@ export default function Home() {
       </style> */}
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <div style={{ display: 'flex', justifyContent: 'center', flexDirection:'column', textAlign: 'center'}}>
-          <h1>Romit Bhandari Personal Blog</h1>
           <div className={styles.imageWrap}>
             <Image className={styles.homeBlog} height={144} width={192} src='/images/home-blog.jpg' alt="Picture of Blog"></Image>
           </div>
-          <p>Hi, I share some of my professional achievements and personal likes and dislikes on ths blog, Thanks!!</p>
+          <h1 style={{fontSize: '1.5rem'}}>&lt;Romit Bhandari's Tech Blog/&gt;</h1>
+          <p className={styles.imagep}>Hi, I share some of my professional achievements and personal likes and dislikes on ths blog, Thanks!!</p>
         </div>
         <div style={{ display: 'flex', justifyContent: 'center'}}>
           <div style={{ display: 'flex', justifyContent: 'center', flexDirection:'column', textAlign:'left'}}>
-            <h2>Popular Blogs</h2>
+            <h2 className={styles.h2}>Popular Blogs</h2>
             <div className={styles.blogItem}>
               <Link href={'/blogpost/learn-js'}><h3>How to learn Java Spring Boot in 2024</h3></Link>
               <p>Watch my videos on YT</p>
+              <button className={styles.btn}>Read More</button>
             </div>
             <div className={styles.blogItem}>
               <h3>How to learn Java Spring Boot in 2024</h3>
               <p>Watch my videos on YT</p>
+              <button className={styles.btn}>Read More</button>
             </div>
             <div className={styles.blogItem}>
               <h3>How to learn Java Spring Boot in 2024</h3>
               <p>Watch my videos on YT</p>
+              <button className={styles.btn}>Read More</button>
             </div>
           </div>
         </div>

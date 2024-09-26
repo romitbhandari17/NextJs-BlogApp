@@ -1,14 +1,31 @@
 .formGroup{
     margin-top: 14px;
+    display: flex;
+    flex-direction: column;
 }
 
 .container{
-    max-width: 100%;
-    display: flex;
-    justify-content: center;
+    max-width: 45vw;
+    margin: auto;
+    /* display: flex;
+    justify-content: center; */
 }
 
 .formLabel{
-    margin: 0 10px;
+    margin: 5px 2px;
     font-size: 1rem;
+}
+
+.input{
+    padding: 6px 6px;
+    border: 1px solid black;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+.btn{
+    margin: 10px 0px;
+    padding: 5px 3px;
+    border-radius: 5px;
+    font-size: 12px;
 }

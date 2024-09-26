@@ -3,7 +3,9 @@ import styles from '../blogpost.module.css';
 async function getBlogData(params) {
   try {
     console.log('params=',params);
-    let apiData = await fetch(`http://localhost:3000/api/blog?slug=${params.slug}`);
+    let apiData = await fetch(`http://localhost:3000/api/blog?slug=${params.slug}`,{
+      cache: 'no-store',  // Forces fresh data on every request (SSR)
+    });
     //console.log(apiData);
     let res = await apiData.json();
     console.log(res);

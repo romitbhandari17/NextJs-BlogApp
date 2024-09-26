@@ -8,8 +8,10 @@ export async function GET(request) {
     const filePath = path.join(process.cwd(), 'blogsdata');
     //console.log(filePath);
     try {
+      const url = new URL(request.url);
+      const count = url.searchParams.get('count');
       const data = await fs.readdir(filePath);
-      
+      data = data.slice(0, count);
       //console.log(data);
       let i;
       let fileData;

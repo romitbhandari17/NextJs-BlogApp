@@ -30,9 +30,6 @@ const Contact = () => {
     }catch(error){
       console.log("Error calling API", error);
     }
-    
-
-
   }
 
   const handleChange = (e) => {
@@ -48,28 +45,28 @@ const Contact = () => {
   }
   return (
     <div className={styles.container}>
-      <h1>
+        <h1>
         Contact Us
+        </h1>
         <form onSubmit={handleSubmit}>
           <div className={styles.formGroup}>
             <label htmlFor="name" className={styles.formLabel}>Name</label>
-            <input type="text" value={name} onChange={handleChange} className={styles.formControl} id="name" placeholder="Name" name="name" />
+            <input className={styles.input} type="text" value={name} onChange={handleChange} id="name" placeholder="Name" name="name" />
           </div>
           <div className={styles.formGroup}>
             <label htmlFor="email" className={styles.formLabel}>Email address</label>
-            <input type="email" value={email} onChange={handleChange} className={styles.formControl} id="email" placeholder="Enter email" name="email" />
+            <input className={styles.input} type="email" value={email} onChange={handleChange} id="email" placeholder="Enter email" name="email" />
           </div>
           <div className={styles.formGroup}>
             <label htmlFor="phone" className={styles.formLabel}>Phone</label>
-            <input type="phone" value={phone} onChange={handleChange} className={styles.formControl} id="phone" placeholder="Phone" name="phone" />
+            <input className={styles.input} type="phone" value={phone} onChange={handleChange} id="phone" placeholder="Phone" name="phone" />
           </div>
           <div className={styles.formGroup}>
             <label htmlFor="desc" className={styles.formLabel}>Description</label>
-            <textarea onChange={handleChange} className={styles.formControl} id="desc" name="desc" value={desc} rows="3" />
+            <textarea className={styles.input} onChange={handleChange} id="desc" name="desc" placeholder="Enter Description"  value={desc} rows="3" />
           </div>
-          <button type="submit" className="btn btn-primary">Submit</button>
+          <button className={styles.btn} type="submit">Submit</button>
         </form>
-      </h1>
     </div>
   )
 }
