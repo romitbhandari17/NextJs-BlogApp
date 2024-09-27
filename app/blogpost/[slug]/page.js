@@ -58,7 +58,7 @@ export default async function Blogpost({ params }) {
     <div className={styles.divWrap} style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', textAlign: 'left' }}>
       <h2>{blog && blog.title}</h2>
       <p>
-        {blog && <div dangerouslySetInnerHTML={createMarkup(blog.content)}></div>}
+        {blog && <span dangerouslySetInnerHTML={createMarkup(blog.content)}></span>}
       </p>
     </div>
   )

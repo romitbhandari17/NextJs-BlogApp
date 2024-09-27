@@ -10,8 +10,14 @@ export async function GET(request) {
     try {
       const url = new URL(request.url);
       const count = url.searchParams.get('count');
-      const data = await fs.readdir(filePath);
-      data = data.slice(0, count);
+      let data = await fs.readdir(filePath);
+      if(data.length<count)
+        data=[];
+      else{
+        const end = parseInt(count)+2;
+        data = data.slice(count, end);
+      }
+      
       //console.log(data);
       let i;
       let fileData;
