@@ -48,3 +48,12 @@
     border-radius: 8px;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 900px) {
+    .mainnav ul li{
+        margin: 0 6px;
+        font-weight: bold;
+        text-decoration: none;
+        list-style: none;
+    }
+}

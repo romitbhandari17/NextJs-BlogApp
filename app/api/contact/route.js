@@ -12,7 +12,6 @@ export async function POST(request) {
         //console.log(contactData);
 
         const files = await fs.readdir(filePath, 'utf-8');
-        console.log(files)
         const newfile = files.length+1;
         filePath = path.join(process.cwd(), 'contactsdata', newfile+'.json');
         await fs.writeFile(filePath, JSON.stringify(contactData));
