@@ -47,7 +47,7 @@ export default function BlogList({ initialBlogs }) {
                     loader={<h4>Loading...</h4>} // Loader component
                     endMessage={
                         <p style={{ textAlign: 'center' }}>
-                            <b>Yay! You've seen it all</b>
+                            <b>Yay! You`ve seen it all</b>
                         </p>
                     }
                 >
